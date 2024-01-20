@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-[#F1F3F5]'>
+    <html lang="en" className=' bg-[#F1F3F5]'>
       <body>
         <header>
           <Navbar />

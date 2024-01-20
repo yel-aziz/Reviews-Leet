@@ -24,12 +24,12 @@ const Comment = ({ login, comment, avatar }: any) => {
       </div>
       <div className="w-[80%] lg:w-[94%] md:w-[90%] h-full  rounded-xl bg-blend-darken">
         <p>{login} </p>
-        <div className=" p-2 bg-orange-100 rounded-xl mt-2   h-auto ">
+        <div className=" p-2 bg-[#4267B2] rounded-xl mt-2   h-auto ">
             <p style={{ overflowWrap: "break-word" }}>{displayText}</p>
             {words.length > 1 && (
               <button
                 onClick={handleToggleText}
-                className="text-blue-500 hover:underline focus:outline-none"
+                className="text-blue-500 hover:underline focus:outline-none text-white"
               >
                 {showFullText ? "Read Less" : "Read More"}
               </button>

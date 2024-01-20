@@ -2,7 +2,9 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-center w-full bg-white h-14 min-h-10 max-w-[2000px]">
+    <div className="w-full bg-white">
+
+    <div className="flex items-center justify-center w-screen  h-14 min-h-10 max-w-[1400px] mx-auto">
       <div className="flex items-center justify-between w-[90%]">
         <div>
           <input
@@ -22,6 +24,7 @@ export default function Navbar() {
           <h1 className="m-2 md:block hidden">yel-aziz</h1>
         </div>
       </div>
+    </div>
     </div>
   );
 }

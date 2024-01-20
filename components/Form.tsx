@@ -27,10 +27,10 @@ const Form = () => {
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-  
+
     // Use checked for checkbox, otherwise use the value
-    const inputValue = type === 'checkbox' ? checked : value;
-  
+    const inputValue = type === "checkbox" ? checked : value;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: inputValue,
@@ -44,24 +44,23 @@ const Form = () => {
     }));
   };
 
-  const handleSubmit = (e:any) => {
-        e.preventDefault();
-      
-        // Create an object with all the form data
-        const formDataObject = {
-          city: formData.city,
-          situation: formData.situation,
-          jobPosition: formData.jobPosition,
-          linkedinUrl: formData.linkedinUrl,
-          image: formData.image,
-          moroccanCities: formData.moroccanCities,
-          workLocation: formData.workLocation,
-          feedback: formData.feedback,
-        };
-      
-        console.log("Form submitted with data:", formDataObject);
-      
-     
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    // Create an object with all the form data
+    const formDataObject = {
+      city: formData.city,
+      situation: formData.situation,
+      jobPosition: formData.jobPosition,
+      linkedinUrl: formData.linkedinUrl,
+      image: formData.image,
+      moroccanCities: formData.moroccanCities,
+      workLocation: formData.workLocation,
+      feedback: formData.feedback,
+    };
+
+    console.log("Form submitted with data:", formDataObject);
+
     closeModal();
   };
 
@@ -89,11 +88,16 @@ const Form = () => {
     // Add more cities as needed
   ];
 
+  const customStyle = {
+    backgroundImage: 'url("/form.png")',
+    backgroundSize: "cover",
+  };
+
   return (
-    <div className="flex justify-center items-center   text-white rounded-md bg-blue-700 cursor-pointer">
+    <div className="flex justify-center items-center max-w-[1440px]  text-white rounded-md bg-blue-700 cursor-pointer">
       <button
         onClick={openModal}
-        className="flex items-center justify-center w-[250px]  whitespace-nowrap"
+        className="flex items-center justify-center w-[250px]   whitespace-nowrap"
       >
         <Image src="/plus.png" alt="" width={50} height={30} />
         <span className="ml-2">Share your Experience</span>
@@ -109,16 +113,19 @@ const Form = () => {
             width: "auto",
             maxWidth: "900px",
             margin: "auto",
-            padding: "10px",
+            padding: "5px",
           },
         }}
       >
-        <div className="flex  flex-col items-center bg-[#F1F3F5] justify-center w-full gap-5  h-auto border-black border">
+        <div
+          style={customStyle}
+          className="flex  flex-col items-center justify-center w-full gap-5  lg:h-auto md:h-full h-auto border-black "
+        >
           <form
             onSubmit={handleSubmit}
-            className="mt-2 w-full md:w-[50%] h-full "
+            className="mt-2 w-full md:w-[50%]  "
           >
-            <label className="flex flex-col gap-2 ">
+            <label className="flex flex-col gap-2  ">
               Company Name:
               <input
                 type="text"
@@ -126,6 +133,7 @@ const Form = () => {
                 name="city"
                 value={formData.city}
                 placeholder="Type here"
+                className="border border-black"
                 onChange={handleInputChange}
               />
             </label>
@@ -152,6 +160,7 @@ const Form = () => {
                 type="checkbox"
                 name="situation"
                 value={formData.situation}
+                className="border border-black"
                 onChange={handleInputChange}
                 placeholder="Type here"
               />
@@ -199,6 +208,7 @@ const Form = () => {
                 name="linkedinUrl"
                 value={formData.linkedinUrl}
                 onChange={handleInputChange}
+                className="border border-black"
                 placeholder="Type here"
               />
             </label>
