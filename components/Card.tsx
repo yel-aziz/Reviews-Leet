@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Card({ name='13371337', status='full stack develloper' }: any) {
   return (
-    <div className="flex  items-center justify-center rounded-md bg-white mt-10  w-[100%] md:w-[90%] lg:w-[900px]  h-[400px] md:h-[260px] shadow-lg hover:shadow-2xl">
+    <div className="flex  items-center justify-center rounded-md bg-white mt-10  w-[100%] md:w-[90%] lg:w-[900px]  h-[400px] md:h-[230px] shadow-lg hover:shadow-2xl">
       <div className="flex flex-col justify-between w-[95%] h-[90%] ">
         <div className=" flex flex-col lg:flex-row  justify-between  w-[100%]  md:h-[60%] lg:h-[50%]  h-auto border">
           <div className="flex flex-col md:flex-row  md:justify-between gap-3 h-[80%]   lg:w-[80%]  font-bold ">
@@ -17,7 +17,7 @@ export default function Card({ name='13371337', status='full stack develloper' }
                 className="w-full h-full rounded-full "
               />
             </div>
-            <div className="flex justify-between flex-col  h-[100px] md:h-full   md:w-[90%]  overflow-hidden">
+            <div className="flex justify-between flex-col  h-[100px] md:h-full   md:w-[90%] border overflow-hidden">
               <h1 className="font-bold"> {name}</h1>
               <h3>{status}</h3>
               <div className="flex gap-5">
@@ -32,7 +32,7 @@ export default function Card({ name='13371337', status='full stack develloper' }
             </div>
           </div>
 
-          <div className="flex lg:flex-wrap md:h-[100px]  w-full lg:w-[60%]  lg:mt-0 mt-auto items-end overflow-x-scroll lg:overflow-hidden">
+          <div className="flex lg:flex-wrap md:h-[100px]   w-full lg:w-[60%] border lg:mt-0 mt-auto lg:items-start items-end overflow-x-scroll lg:overflow-hidden">
             <div className="flex lg:flex-wrap gap-5 h-auto ">
               <Badge
                 level="/job.png"
@@ -53,7 +53,7 @@ export default function Card({ name='13371337', status='full stack develloper' }
           <div className="flex flex-col">
             <p className="text-xs">Posted On: 2024-01-01</p>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 text-xs md:text-base">
               <p>Linkding company : </p>
               <div className="w-7 h-7">
                 <Image
@@ -68,8 +68,8 @@ export default function Card({ name='13371337', status='full stack develloper' }
           </div>
           <div className="flex  items-center justify-end mb-2">
             <div className="flex  flex-col items-center">
-              <Image src="/goodEx.png" alt="" width={50} height={50} />
-              <p className="text-xs">Experience Rate </p>
+              <Image src="/goodEx.png" alt="" width={30} height={50} />
+              <p className="text-xs ">Experience Rate </p>
             </div>
           </div>
         </div>

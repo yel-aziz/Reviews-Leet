@@ -16,7 +16,7 @@ export default function Home() {
   getCard()*/
 
   return (
-    <main className="flex items-center h-full  min-h-screen min-w-[280px] max-w-[1440px] mx-auto  flex-col bg-[#F1F3F5]">
+    <main className="flex items-center h-full  min-h-screen min-w-[280px] border border-black max-w-[1440px] mx-auto  flex-col bg-[#F1F3F5]">
       <div className="flex  flex-col items-center  w-[90%]  h-full mt-10">
         <div className="flex  justify-end border w-[90%]  ml-auto">
           <Form />

@@ -1,20 +1,19 @@
-"use client"
+"use client";
 import Card from "@/components/Card";
 import Comment from "@/components/Comment";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Engagment() {
-
-    const [feedback,setComment] = useState('Null')
-    const HandleComment = (event:any) =>{
-        setComment(event.target.value)
-    }
+  const [feedback, setComment] = useState("Null");
+  const HandleComment = (event: any) => {
+    setComment(event.target.value);
+  };
   return (
-    <div className="flex flex-col items-center   min-w-[280px] bg-[#F1F3F5] md:h-screen   w-full">
-      <div className="flex flex-col w-[90%] border justify-between items-center   ">
+    <div className="flex flex-col items-center   min-w-[280px] bg-[#F1F3F5] md:h-screen h-full  w-full">
+      <div className="flex flex-col w-[90%] border justify-between items-center ">
         <Card />
-        <div className=" w-[100%] lg:w-[900px]   h-[90px] mt-5 ">
+        <div className=" w-[100%] lg:w-[900px] border  h-[90px] mt-5 ">
           <div className="flex w-full h-full">
             <div>
               <Image
@@ -50,12 +49,13 @@ export default function Engagment() {
           </div>
         </div>
         <div className="w-[100%] ">
-
-
-        <Comment avatar='/idimage.jpeg' comment='lorhhhhhhhhhhhhhhhhv hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+          <Comment
+            avatar="/idimage.jpeg"
+            comment="lorhhhhhhhhhhhhhhhhv hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
         rrrrrrrrregegegegegegegegegjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkegeg' login='yel-aziz' />
-       
+        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkegeg"
+            login="yel-aziz"
+          />
         </div>
       </div>
     </div>
