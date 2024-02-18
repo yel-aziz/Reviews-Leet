@@ -1,4 +1,4 @@
-How to run project
+How to run the project
 
 1 : go to / RUN docker-compose up --build to creat the database
 2 : go to nextjs/front-end RUN npm i then npm run dev
