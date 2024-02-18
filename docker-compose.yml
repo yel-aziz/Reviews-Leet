@@ -1,0 +1,54 @@
+version: '3.6'
+
+services:
+  nestjs:
+    build: ./containers/nestjs
+    image: nest
+    container_name: nest
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+      - 5555:5555
+    depends_on:
+      - postgress
+    volumes:
+      - nestjs:/home/back-end/
+    networks:
+      - transcendence
+    env_file:
+      - .env
+  postgress:
+    build: ./containers/postgresql
+    image: postgresql
+    container_name: postgresql
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
+    volumes:
+      - C:\Users\yassir\Desktop\recov:/var/lib/postgresql/data
+    networks:
+      - transcendence
+  nextjs:
+    build: ./containers/nextjs
+    image: next
+    container_name: next
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - nextjs:/home/front-end/
+    networks:
+      - transcendence
+    env_file:
+      - .env
+
+volumes:
+  nextjs:
+  nestjs:
+  postgresql:
+
+networks:
+  transcendence:
+    name: transcendence

@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+// schema.prisma
+
+model User {
+  id        Int      @id @default(autoincrement())
+  login     String
+  email     String   @unique
+  avatar    String?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Define a relation to companies created by the user
+  companies Company[] @relation("CreatedByUser")
+
+  // Define a relation to comments made by the user
+  comments Comment[] @relation("CommentsByUser")
+}
+
+model Company {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  // Define a relation to the user who created the company
+  creator     User      @relation("CreatedByUser", fields: [creatorId], references: [id])
+  creatorId   Int
+  YourStatus  String?
+  city        String?
+  Positon     String?
+  Conatract   String?
+  progress    String?
+  avatar      String? @default("http://localhost:8000/uploads/1706546585198-178489636.png")
+  linkding    String? @default("https://www.linkedin.com/school/1337-coding-school/")
+  emojistatus String? @default("/goodEx.png")
+
+  // Define a relation to comments on the company
+  comments    Comment[] @relation("CommentsOnCompany")
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  text      String
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+
+  // Define a relation to the user who made the comment
+  user      User      @relation("CommentsByUser", fields: [userId], references: [id])
+  userId    Int
+
+  // Define a relation to the company being commented on
+  company   Company   @relation("CommentsOnCompany", fields: [companyId], references: [id])
+  companyId Int
+}
