@@ -1,0 +1,29 @@
+How to run project
+
+1 : go to / RUN docker-compose up --build to creat the database
+2 : go to nextjs/front-end RUN npm i then npm run dev
+3 : go to nestjs/reviews RUN npm i then npx prisma migrate dev then npm run start:dev
+
+ps: all API credential are included don't worry about it
+
+To start contributing to leetreviews.com, follow these steps:
+
+Fork the Repository: Click the "Fork" button at the top-right corner of the GitHub repository page to create your own copy of the project.
+
+Clone Your Fork: Clone your forked repository to your local machine using the following command:
+
+
+Create a Branch: Create a new branch for your changes using a descriptive name.
+
+
+Make Changes: Make your desired changes to the codebase. Ensure that your changes adhere to the project's coding conventions and guidelines.
+
+Test Your Changes: Test your changes thoroughly to ensure they work as expected and do not introduce any new issues.
+
+Commit Your Changes: Once you're satisfied with your changes, commit them to your branch with descriptive commit messages.
+
+
+
+Push Your Changes: Push your changes to your forked repository on GitHub.
+
+Submit a Pull Request: Go to the GitHub page of your forked repository and submit a pull request. Provide a detailed description of your changes and the problem they solve.
