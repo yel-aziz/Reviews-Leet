@@ -88,7 +88,6 @@ export default function Engagment() {
       );
       setComments(refreshedData.data.comments);
       console.log('comments', refreshedData.data)
-      //setCommentsLength(refreshedData.data.comments.length);
     } catch (error) {
 
       routeur.push('/login')
@@ -106,14 +105,13 @@ export default function Engagment() {
   };
 
   const handleTextareaChange = (event: any) => {
-    // Update the state with the current value of the textarea
     setFeedback(event.target.value);
     console.log("comment to send", feedback);
   };
 
 
   return (
-    <div className="flex flex-col items-center   min-w-[280px] bg-[#F1F3F5] md:h-screen h-full   w-full">
+    <div className="flex flex-col items-center mt-10  min-w-[280px] bg-[#F1F3F5] md:h-screen h-full   w-full">
       <div className="flex flex-col w-[90%]  justify-between items-center ">
         <Card
           id={data.id}

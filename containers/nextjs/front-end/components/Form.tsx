@@ -142,7 +142,7 @@ console.log('file',file)
       try {
         const token = Cookies.get("token");
         const headers = {
-          "Content-Type": "application/json", // Adjust the content type as needed
+          "Content-Type": "application/json", 
           Authorization: `Bearer ${token}`,
         };
         response = await axios.post(
@@ -222,6 +222,7 @@ console.log('file',file)
             maxWidth: "900px",
             margin: "auto",
             padding: "5px",
+            marginTop: "20px"
           },
         }}
       >

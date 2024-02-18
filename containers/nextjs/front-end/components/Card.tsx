@@ -58,7 +58,7 @@ export default function Card({
     }
 
     getUser();
-  }, []); // Include 'id' as a dependency to re-run the effect when 'id' changes
+  }, []); 
   const uniqueUserIds = new Set();
 
   // Filter the array to keep only unique users
