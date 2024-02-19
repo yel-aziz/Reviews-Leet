@@ -169,6 +169,7 @@ console.log('file',file)
   const workLocations = [
     "Remote",
     "On-site",
+    "Hybird",
     // Add more options as needed
   ];
   const moroccanCities = [
@@ -177,9 +178,9 @@ console.log('file',file)
     "Marrakech",
     "Fes",
     "Agadir",
-    "Buengrire",
+    "Benguerir",
     "Khouribga",
-    "Asafi",
+    "Safi",
     "Tanger",
     // Add more cities as needed
   ];
@@ -188,7 +189,7 @@ console.log('file',file)
     "CDD",
     "CDI",
     "Freelance",
-    // Add more cities as needed
+    // Add more job positions as needed
   ];
 
   const customStyle = {
