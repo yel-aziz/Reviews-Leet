@@ -118,7 +118,7 @@ export default function Card({
                     )
                   }
                 >
-                  <h1 className="text-xs"> Dicord:</h1>
+                  <h1 className="text-xs"> Discord:</h1>
                   <Image
                     src={"/discord.png"}
                     alt=""
