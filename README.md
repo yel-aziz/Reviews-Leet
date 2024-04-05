@@ -1,25 +1,22 @@
 ## How to run the project 🚀
-1.
 ```bash
  git clone https://github.com/yel-aziz/Reviews-Leet.git
 ```
-2.
 ```bash
 cd Reviews-Leet
-RUN docker-compose up --build to create the database
+docker-compose up --build
 ```
-3.
 ```bash
 cd nextjs/front-end
 npm i && npm run dev
 ```
-4.
 ```bash
 cd nestjs/reviews
-RUN npm i && npx prisma migrate dev && npm run start:dev
+npm i && npx prisma migrate dev && npm run start:dev
 ```
 
-[!NOTE] : all API credential are included don't worry about it.
+> [!NOTE]
+> all API credential are included don't worry about it.
 
 ## To start contributing to leetreviews.com, follow these steps 🤝🌱:
 
