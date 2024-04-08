@@ -5,50 +5,87 @@ import { useEffect } from "react";
 
 export default function Login() {
   return (
-    <div className="h-screen w-screen overflow-x-hidden text-white relative">
-
-      <div className="absolute inset-0">
-        <Image
-          src="/books.png"  
-          alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-
-
-      <div className="h-screen grid place-content-center text-center space-y-7 relative z-10">
-        <div>
-          <Image
-            src="/42.png"
-            width={100}
-            height={30}
-            alt="/"
-            className="m-auto"
-            style={{ width: 100 }}
+    <div className="flex flex-col mb-0 min-h-screen">
+      <img
+        src="/leet-reviews-logo.svg"
+        alt="leet-reviews-logo"
+        className="h-8 self-start my-16 mx-56"
+      />
+      <div className="m-10 self-center flex flex-col gap-36">
+        <div className="w-100 -ml-12">
+          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+            <span className="text-primary font-semibold text-lg">
+              Discover Real Insights:
+            </span>
+            <p className="text-quaternary text-base">
+              Gain firsthand knowledge from your peers about their internship
+              experiences, providing invaluable insights into various companies
+              and industries.
+            </p>
+          </p>
+          <img
+            src="/check-mark.svg"
+            alt="check-mark"
+            className="h-12 -my-14 -mx-6 -mt-32"
           />
         </div>
-        <div className="text-center space-y-7">
-          <h5 className="font-semibold text-3xl">Log in</h5>
-          <p className="text-lg capitalize antialiased max-w-sm">
-            Join us now and Share With Us your Experience
+        <div className="w-100">
+          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+            <span className="text-primary font-semibold text-lg">
+              Empower Informed Decisions:
+            </span>
+            <p className="text-quaternary text-base">
+              Make informed decisions about your future internships by accessing
+              candid reviews and detailed accounts directly from students who
+              have been there.
+            </p>
           </p>
-          <Link
-            href={'http://localhost:8000/42/oauth'}
-            className="flex outline-0 items-center hover:shadow-xl hover:bg-[#BE4FC2] px-5 sm:px-10 m-auto bg-[#8196c3] h-[60px]  rounded-[60px] text-dark font-blod w-fit"
-          >
-            <Image
-              src="/42.png"
-              width={30}
-              height={30}
-              alt="42 logo"
-              className=""
-              style={{ width: 30 }}
-              blurDataURL="/42.png"
-            />
-            <span className="ml-2 font-semibold">sign in with 42</span>
-          </Link>
+          <img
+            src="/check-mark.svg"
+            alt="check-mark"
+            className="h-12 -my-14 -mx-6 -mt-32"
+          />
         </div>
+        <div className="w-100 ml-12">
+          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+            <span className="text-primary font-semibold text-lg">
+              Community-Driven Resource:
+            </span>
+            <p className="text-quaternary text-base">
+              Join a supportive community where students share their
+              experiences, fostering transparency and helping you navigate the
+              internship landscape with confidence.
+            </p>
+          </p>
+          <img
+            src="/check-mark.svg"
+            alt="check-mark"
+            className="h-12 -my-14 -mx-6 -mt-32"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col justify-center items-center shadow-2xl rounded-lg w-30 p-6 self-center mt-52 gap-5">
+        <div className="flex flex-col items-center text-quaternary">
+          <p className="font-bold text-2xl ">Share With Us Your Experience.</p>
+          <p className="font-bold text-2xl ">Join NOW!</p>
+        </div>
+        <Link href={"http://localhost:8000/42/oauth"}>
+          <div className="flex justify-center items-center bg-primary font-bold text-white gap-3 w-64 p-2 rounded-xl shadow-xl">
+            <img src="/42-logo.svg" alt="42-logo" className="h-7" />
+            <span>Sign in with Intra42</span>
+          </div>
+        </Link>
+      </div>
+      <div className="flex text-white bg-quaternary justify-between items-center mt-auto font-semibold p-5 px-16">
+        <div>
+          <a href="https://www.linkedin.com/in/yassir-el-azizi-1ba527216/">
+            by Yassir El azizi
+          </a>
+        </div>
+        <span>LeetReviews 2024</span>
+        <a href="https://github.com/yel-aziz/Reviews-Leet" target="_blank">
+          <img src="/github-logo.svg" alt="github-logo" className="h-10" />
+        </a>
       </div>
     </div>
   );
