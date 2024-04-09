@@ -6,14 +6,21 @@ import { useEffect } from "react";
 export default function Login() {
   return (
     <div className="flex flex-col mb-0 min-h-screen">
-      <img
-        src="/leet-reviews-logo.svg"
-        alt="leet-reviews-logo"
-        className="h-8 self-start my-16 mx-56"
-      />
+      <div className="flex my-16 mx-56 justify-between">
+        <img
+          src="/leet-reviews-logo.svg"
+          alt="leet-reviews-logo"
+          className="h-8 self-start"
+        />
+        <Link href={"http://localhost:8000/42/oauth"}>
+          <div className="flex justify-center items-center bg-primary font-bold text-white gap-3 w-36 p-2 rounded-xl shadow-lg hover:shadow-2xl border-2 border-primary hover:border-quaternary hover:bg-white hover:text-quaternary">
+            Sign in
+          </div>
+        </Link>
+      </div>
       <div className="m-10 self-center flex flex-col gap-36">
         <div className="w-100 -ml-12">
-          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+          <p className="bg-quinary p-5 rounded-xl hover:shadow-2xl shadow-lg">
             <span className="text-primary font-semibold text-lg">
               Discover Real Insights:
             </span>
@@ -30,7 +37,7 @@ export default function Login() {
           />
         </div>
         <div className="w-100">
-          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+          <p className="bg-quinary p-5 rounded-xl hover:shadow-2xl shadow-lg">
             <span className="text-primary font-semibold text-lg">
               Empower Informed Decisions:
             </span>
@@ -47,7 +54,7 @@ export default function Login() {
           />
         </div>
         <div className="w-100 ml-12">
-          <p className="bg-quinary p-5 rounded-xl shadow-2xl">
+          <p className="bg-quinary p-5 rounded-xl hover:shadow-2xl shadow-lg">
             <span className="text-primary font-semibold text-lg">
               Community-Driven Resource:
             </span>
@@ -70,7 +77,7 @@ export default function Login() {
           <p className="font-bold text-2xl ">Join NOW!</p>
         </div>
         <Link href={"http://localhost:8000/42/oauth"}>
-          <div className="flex justify-center items-center bg-primary font-bold text-white gap-3 w-64 p-2 rounded-xl shadow-xl">
+          <div className="flex justify-center items-center bg-primary font-bold text-white gap-3 w-64 p-2 rounded-xl hover:shadow-2xl hover:bg-quaternary">
             <img src="/42-logo.svg" alt="42-logo" className="h-7" />
             <span>Sign in with Intra42</span>
           </div>
