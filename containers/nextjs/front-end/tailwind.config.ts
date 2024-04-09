@@ -7,11 +7,15 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: "425px",
+      desktop: "2560px",
+    },
     extend: {
-        spacing : {
-            '100': '64rem',
-            '30': '30rem',
-        },
+      spacing: {
+        "100": "64rem",
+        "30": "30rem",
+      },
       colors: {
         primary: "#FF204E",
         secondary: "#A0153E",
