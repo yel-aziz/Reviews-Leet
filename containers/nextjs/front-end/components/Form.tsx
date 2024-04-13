@@ -193,7 +193,7 @@ console.log('file',file)
   ];
 
   const customStyle = {
-    backgroundImage: 'url("/form.png")',
+    // backgroundImage: 'url("/form.png")',
     backgroundSize: "cover",
   };
 
@@ -223,7 +223,7 @@ console.log('file',file)
             maxWidth: "900px",
             margin: "auto",
             padding: "5px",
-            marginTop: "20px"
+            marginTop: "20px",
           },
         }}
       >
@@ -233,30 +233,28 @@ console.log('file',file)
         >
           <form
             onSubmit={handleSubmit}
-            className="mt-2 w-full md:w-[50%] h-full "
+            className="flex items-center flex-col mt-2 w-full md:w-[50%] h-full "
           >
-            <label className="flex flex-col gap-2  ">
-              Company Name:
+            <label className="flex flex-col gap-2">
               <input
                 type="text"
                 color="black"
                 name="companyName"
                 value={formData.companyName}
-                placeholder="Type here"
-                className="border border-black"
+                placeholder="Company Name"
+                className="border border-black rounded-md w-72 h-9 pl-3"
                 onChange={handleInputChange}
                 required
               />
             </label>
             <label className="flex flex-col gap-2 mt-5">
-              Your Job Status:
               <input
                 type="text"
                 color="black"
                 name="jobPosition"
                 value={formData.jobPosition}
-                placeholder="Type here"
-                className="border border-black"
+                placeholder="Job Status"
+                className="border border-black rounded-md w-72 h-9 pl-3"
                 onChange={handleInputChange}
                 required
               />
@@ -266,24 +264,24 @@ console.log('file',file)
               <div>
                 <p>How You Rate Your Experience in this Company</p>
               </div>
-              <div className="flex md:flex-row flex-col w-full items-center gap-5 h-full justify-between">
+              <div className="flex w-full items-center gap-5 h-full justify-between">
                 <div
-                  className={`flex items-center justify-center  border ${
+                  className={`flex items-center justify-center border w-72 ${
                     backgroundE ? "bg-lime-300" : ""
-                  } border-black md:w-[32%] w-full  gap-2`}
+                  } border-black md:w-[32%]   gap-2`}
                   onClick={() => {
                     setBackground(!backgroundE);
                     setBackgroundM(false);
                     setBackgroundB(false);
                   }}
                 >
-                  <div className="w-7 h-7 ">
+                  <div className=" h-7 ">
                     <Image
                       src={"/goodEx.png"}
                       alt=""
                       width={30}
                       height={10}
-                      className="w-full h-full"
+                      className=" h-full"
                     />
                   </div>
                   <p>Excellent</p>
@@ -412,7 +410,7 @@ console.log('file',file)
             </label>
 
             <div className="mt-5  ">
-              <p>YOUR Feedback (Optional)</p>
+              <p>Your Feedback (Optional)</p>
               <div className="h-[100px] overflow-y-scroll mt-2">
                 <textarea
                   id="feedback"
@@ -438,9 +436,6 @@ console.log('file',file)
             >
               Submit
             </button>
-            
-
-
           </form>
         </div>
       </Modal>

@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "@prisma/client": "^5.8.1"
+  },
+  "prisma": {
+    "schema": "./reviews/prisma/schema.prisma"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js"
   }
-  
 }

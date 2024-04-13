@@ -62,6 +62,22 @@ export default function Navbar() {
     <div className="fixed top-0 z-10 bg-white min-w-[275px] w-full">
       <div className="flex items-center justify-center  h-14 min-h-10 min-w-[275px] max-w-[1400px] mx-auto">
         <div className="flex items-center justify-between w-[90%]">
+          <div
+            className="flex flex-col items-center justify-between w-5 h-5 cursor-pointer"
+            onClick={() => {
+              routeur.push("/");
+              setLogout(false);
+            }}
+          >
+            <Image
+              src="/accueil.png"
+              alt=""
+              width={50}
+              height={50}
+              className="w-full h-full"
+            />
+            <p className="text-xs">Home</p>
+          </div>
           <div>
             <input
               type="search"
@@ -73,19 +89,6 @@ export default function Navbar() {
           <div className="flex flex-col items-center justify-center h-[50px] gap-5 ">
             <div className="flex w-full items-center justify-center gap-5">
               <div
-                className="flex flex-col items-center justify-between w-5 h-5 cursor-pointer"
-                onClick={() => {routeur.push("/"); setLogout(false)}}
-              >
-                <Image
-                  src="/accueil.png"
-                  alt=""
-                  width={50}
-                  height={50}
-                  className="w-full h-full"
-                />
-                <p className="text-xs">Home</p>
-              </div>
-              <div
                 className={`flex ${
                   Logout ? "hidden" : "block"
                 } items-center gap-2`}
@@ -96,19 +99,18 @@ export default function Navbar() {
                 </div>
                 <h1 className=" md:block hidden">{login}</h1>
               </div>
-            <div
-              className={`flex items-center justify-center rounded-full h-10 w-20  bg-white ${
-                Logout ? "block" : "hidden"
-              } text-red-700 font-bold cursor-pointer `}
-              onClick={() => {
-                deleteAllCookies();
-                routeur.push("/login");
-              }}
-            >
-              Logout
+              <div
+                className={`flex items-center justify-center rounded-full h-10 w-20  bg-white ${
+                  Logout ? "block" : "hidden"
+                } text-red-700 font-bold cursor-pointer `}
+                onClick={() => {
+                  deleteAllCookies();
+                  routeur.push("/login");
+                }}
+              >
+                Logout
+              </div>
             </div>
-            </div>
-
           </div>
         </div>
       </div>
