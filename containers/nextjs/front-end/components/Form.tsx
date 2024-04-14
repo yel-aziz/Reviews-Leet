@@ -198,7 +198,7 @@ console.log('file',file)
   };
 
   const notify = () => {
-    toast.error(" Please Fill Required Inputs  !", {
+    toast.error(" Please Fill Required Inputs !", {
       position: "top-center",
     });
   };
@@ -206,7 +206,7 @@ console.log('file',file)
     <div className="flex justify-center items-center max-w-[1440px]  text-white rounded-md bg-blue-700 cursor-pointer">
       <button
         onClick={openModal}
-        className="flex items-center justify-center w-[250px] p-1  whitespace-nowrap"
+        className="flex items-center justify-center w-[250px] p-1 whitespace-nowrap"
       >
         <Image src="/plus.png" alt="" width={50} height={30} />
         <span className="ml-2">Share your Experience</span>
@@ -219,225 +219,224 @@ console.log('file',file)
             backgroundColor: "rgba(0, 0, 0, 0.5)",
           },
           content: {
-            width: "auto",
+            width: "900px",
+            height: "970px",
             maxWidth: "900px",
             margin: "auto",
-            padding: "5px",
-            marginTop: "20px",
           },
         }}
       >
-        <div
+        {/* <div
           style={customStyle}
-          className="flex  flex-col items-center justify-center w-full gap-5  lg:h-auto md:h-auto h-auto border-black "
+          className="flex flex-col items-center justify-center w-98 border-black bg-red-700"
+        > */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex items-center flex-col m-5 bg-whi text-quaternary w-98 rounded-md p-7"
         >
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center flex-col mt-2 w-full md:w-[50%] h-full "
-          >
-            <label className="flex flex-col gap-2">
-              <input
-                type="text"
-                color="black"
-                name="companyName"
-                value={formData.companyName}
-                placeholder="Company Name"
-                className="border border-black rounded-md w-72 h-9 pl-3"
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label className="flex flex-col gap-2 mt-5">
-              <input
-                type="text"
-                color="black"
-                name="jobPosition"
-                value={formData.jobPosition}
-                placeholder="Job Status"
-                className="border border-black rounded-md w-72 h-9 pl-3"
-                onChange={handleInputChange}
-                required
-              />
-            </label>
+          <div className="font-bold mb-7 p-2 rounded-lg text-xl text-white bg-primary">Share Your Experience</div>
+          <label className="flex flex-col">
+            <div className="font-semibold">Company Name</div>
+            <input
+              type="text"
+              color="black"
+              name="companyName"
+              value={formData.companyName}
+              placeholder="Company Name"
+              className="border border-black rounded-md w-72 h-9 pl-3"
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label className="flex flex-col mt-5">
+            <div className="font-semibold">Job Status</div>
+            <input
+              type="text"
+              color="black"
+              name="jobPosition"
+              value={formData.jobPosition}
+              placeholder="Job Status"
+              className="border border-black rounded-md w-72 h-9 pl-3"
+              onChange={handleInputChange}
+              required
+            />
+          </label>
 
-            <div className=" mt-5">
-              <div>
-                <p>How You Rate Your Experience in this Company</p>
-              </div>
-              <div className="flex w-full items-center gap-5 h-full justify-between">
-                <div
-                  className={`flex items-center justify-center border w-72 ${
+          <div className="flex flex-col items-center mt-5">
+            <div className="font-semibold">
+              How You Rate Your Experience in this Company?
+            </div>
+            <div className="flex w-full items-center gap-5 h-full justify-between">
+              <div
+                className={`flex justify-center items-center border w-36 rounded-md
+                  ${
                     backgroundE ? "bg-lime-300" : ""
                   } border-black md:w-[32%]   gap-2`}
-                  onClick={() => {
-                    setBackground(!backgroundE);
-                    setBackgroundM(false);
-                    setBackgroundB(false);
-                  }}
-                >
-                  <div className=" h-7 ">
-                    <Image
-                      src={"/goodEx.png"}
-                      alt=""
-                      width={30}
-                      height={10}
-                      className=" h-full"
-                    />
-                  </div>
-                  <p>Excellent</p>
+                onClick={() => {
+                  setBackground(!backgroundE);
+                  setBackgroundM(false);
+                  setBackgroundB(false);
+                }}
+              >
+                <div className=" h-7 ">
+                  <Image
+                    src={"/goodEx.png"}
+                    alt=""
+                    width={30}
+                    height={10}
+                    className=" h-full"
+                  />
                 </div>
-                <div
-                  className={`flex items-center border border-black justify-center ${
-                    backgroundM ? "bg-amber-400" : ""
-                  } md:w-[32%] w-full gap-2`}
-                  onClick={() => {
-                    setBackgroundM(!backgroundM);
-                    setBackgroundB(false);
-                    setBackground(false);
-                  }}
-                >
-                  <div className="w-7 h-7">
-                    <Image
-                      src={"/mediumEx.png"}
-                      alt=""
-                      width={30}
-                      height={10}
-                      className="w-full h-full"
-                    />
-                  </div>
-                  <p>Medium</p>
+                <p className="font-light">Excellent</p>
+              </div>
+              <div
+                className={`flex border border-black justify-center items-center w-36 rounded-md ${
+                  backgroundM ? "bg-amber-400" : ""
+                } md:w-[32%] w-full gap-2`}
+                onClick={() => {
+                  setBackgroundM(!backgroundM);
+                  setBackgroundB(false);
+                  setBackground(false);
+                }}
+              >
+                <div className="w-7 h-7">
+                  <Image
+                    src={"/mediumEx.png"}
+                    alt=""
+                    width={30}
+                    height={10}
+                    className="w-full h-full"
+                  />
                 </div>
-                <div
-                  className={`flex items-center justify-center border ${
-                    backgroundB ? "bg-red-500" : ""
-                  } border-black md:w-[32%] w-full gap-2`}
-                  onClick={() => {
-                    setBackgroundB(!backgroundB);
-                    setBackground(false);
-                    setBackgroundM(false);
-                  }}
-                >
-                  <div className="w-7 h-7">
-                    <Image
-                      src={"/badEx.png"}
-                      alt=""
-                      width={30}
-                      height={10}
-                      className="w-full h-full"
-                    />
-                  </div>
-                  <p>Bad</p>
+                <p className="font-light">Medium</p>
+              </div>
+              <div
+                className={`flex items-center justify-center border w-36 rounded-md ${
+                  backgroundB ? "bg-red-500" : ""
+                } border-black md:w-[32%] w-full gap-2`}
+                onClick={() => {
+                  setBackgroundB(!backgroundB);
+                  setBackground(false);
+                  setBackgroundM(false);
+                }}
+              >
+                <div className="w-7 h-7">
+                  <Image
+                    src={"/badEx.png"}
+                    alt=""
+                    width={30}
+                    height={10}
+                    className="w-full h-full"
+                  />
                 </div>
+                <p className="font-light">Bad</p>
               </div>
             </div>
-            <label className="flex flex-col gap-2 mt-5">
-              Company City:
-              <select
-                name="moroccanCities"
-                value={formData.moroccanCities}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="" disabled>
-                  Select a city
-                </option>
-                {moroccanCities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="flex  gap-2 mt-5">
-              You Still Possed this job:
-              <input
-                type="checkbox"
-                name="situation"
-                value={formData.situation}
-                className="border border-black"
-                onChange={handleInputChange}
-                placeholder="Type here"
-              />
-            </label>
-            <label className="flex flex-col gap-2 mt-5">
-              Contract Type:
-              <select
-                name="contracttype"
-                value={formData.contracttype}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="" disabled>
-                  Select a Position
-                </option>
-
-                {jobPosition.map((job) => (
-                  <option key={job} value={job}>
-                    {job}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="flex flex-col gap-2 mt-5">
-              Work Location:
-              <select
-                name="workLocation"
-                value={formData.workLocation}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="" disabled>
-                  Select a Work Location
-                </option>
-                {workLocations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="flex flex-col gap-2 mt-5">
-              Company LinkedIn URL:
-              <input
-                type="text"
-                name="linkedinUrl"
-                value={formData.linkedinUrl}
-                onChange={handleInputChange}
-                className="border border-black"
-                placeholder="Type here"
-              />
-            </label>
-
-            <div className="mt-5  ">
-              <p>Your Feedback (Optional)</p>
-              <div className="h-[100px] overflow-y-scroll mt-2">
-                <textarea
-                  id="feedback"
-                  onChange={handleInputChange}
-                  placeholder="Write your Feedback"
-                  name="feedback"
-                  className="w-full h-full"
-                ></textarea>
-              </div>
-            </div>
-            <label className="flex flex-col gap-2 mt-5">
-              Company Image:
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-              />
-            </label>
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              className="bg-blue-500 text-white px-4 py-2 mt-5 "
+          </div>
+          <label className="flex gap-2 mt-5">
+            <div className="font-semibold">You Still Possed this job</div>
+            <input
+              type="checkbox"
+              name="situation"
+              value={formData.situation}
+              className="border border-black"
+              onChange={handleInputChange}
+              placeholder="Type here"
+            />
+          </label>
+          <label className="flex gap-2 mt-5">
+            <div className="font-semibold">Company Location:</div>
+            <select
+              name="moroccanCities"
+              value={formData.moroccanCities}
+              onChange={handleInputChange}
+              required
             >
-              Submit
-            </button>
-          </form>
-        </div>
+              <option value="" disabled>
+                Select a city
+              </option>
+              {moroccanCities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="flex gap-2 mt-5">
+            <div className="font-semibold">Contract Type:</div>
+            <select
+              name="contracttype"
+              value={formData.contracttype}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="" disabled>
+                Select a Position
+              </option>
+
+              {jobPosition.map((job) => (
+                <option key={job} value={job}>
+                  {job}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="flex gap-2 mt-5">
+            <div className="font-semibold">Work Location:</div>
+            <select
+              name="workLocation"
+              value={formData.workLocation}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="" disabled>
+                Select a Work Location
+              </option>
+              {workLocations.map((location) => (
+                <option key={location} value={location}>
+                  {location}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="flex items-center gap-2 mt-5">
+            <div className="font-semibold">Company LinkedIn URL:</div>
+            <input
+              type="text"
+              name="linkedinUrl"
+              value={formData.linkedinUrl}
+              onChange={handleInputChange}
+              className="border border-black rounded-md p-1"
+              placeholder="Company LinkedIn"
+            />
+          </label>
+
+          <div className="mt-5">
+            <p className="font-semibold">Your Feedback (Optional)</p>
+            <div className="h-[150px] w-96 overflow-y-scroll mt-2">
+              <textarea
+                id="feedback"
+                onChange={handleInputChange}
+                placeholder="Write your Feedback"
+                name="feedback"
+                className="w-full h-full rounded-md p-3"
+              ></textarea>
+            </div>
+          </div>
+          <label className="flex gap-2 mt-5">
+            <div className="font-semibold">Company Image:</div>
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+          </label>
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="bg-quaternary text-white px-4 py-2 mt-5 rounded-md font-semibold"
+          >
+            Submit
+          </button>
+        </form>
+        {/* </div> */}
       </Modal>
     </div>
   );

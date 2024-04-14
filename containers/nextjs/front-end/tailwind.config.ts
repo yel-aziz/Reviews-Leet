@@ -14,6 +14,9 @@ const config: Config = {
     extend: {
       spacing: {
         "100": "64rem",
+        "98": "50rem",
+        "890": "890px",
+        "970": "970px",
         "30": "30rem",
       },
       colors: {
