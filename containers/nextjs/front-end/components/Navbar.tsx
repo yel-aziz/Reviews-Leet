@@ -63,35 +63,33 @@ export default function Navbar() {
       <div className="flex items-center justify-center  h-14 min-h-10 min-w-[275px] max-w-[1400px] mx-auto">
         <div className="flex items-center justify-between w-[90%]">
           <div
-            className="flex flex-col items-center justify-between w-5 h-5 cursor-pointer"
+            className="flex flex-col items-center justify-between w-32 h-3w-32 cursor-pointer"
             onClick={() => {
               routeur.push("/");
               setLogout(false);
             }}
           >
             <Image
-              src="/accueil.png"
-              alt=""
-              width={50}
-              height={50}
-              className="w-full h-full"
+              src="/leet-reviews-logo.svg"
+              alt="leet-reviews-logo"
+              width={350}
+              height={350}
+              className="w-96 h-96"
             />
-            <p className="text-xs">Home</p>
+            {/* <p className="text-xs">Home</p> */}
           </div>
-          <div>
+          <div className="w-72">
             <input
               type="search"
               placeholder="Company Name"
               onChange={handleSearchChange}
-              className="bg-gray-400 border border-black w-[80%] rounded-full bg-transparent p-1 outline-none"
+              className="bg-gray-400 border border-black w-[100%] rounded-full bg-transparent py-2 pl-3 outline-none"
             />
           </div>
-          <div className="flex flex-col items-center justify-center h-[50px] gap-5 ">
-            <div className="flex w-full items-center justify-center gap-5">
+          <div className="flex flex-col items-start justify-start h-[50px] p-1">
+            <div className="flex flex-col w-full items-end justify-end">
               <div
-                className={`flex ${
-                  Logout ? "hidden" : "block"
-                } items-center gap-2`}
+                className={`flex items-center gap-2`}
                 onClick={() => setLogout(!Logout)}
               >
                 <div className="relative w-10 h-10">
@@ -100,15 +98,22 @@ export default function Navbar() {
                 <h1 className=" md:block hidden">{login}</h1>
               </div>
               <div
-                className={`flex items-center justify-center rounded-full h-10 w-20  bg-white ${
+                className={`flex items-center justify-center rounded-md border-2 border-quaternary bg-white my-3 p-2 gap-2 ${
                   Logout ? "block" : "hidden"
-                } text-red-700 font-bold cursor-pointer `}
+                } text-primary font-bold cursor-pointer `}
                 onClick={() => {
                   deleteAllCookies();
                   routeur.push("/login");
                 }}
               >
-                Logout
+                <Image
+                  src="/logout.png"
+                  alt="logout"
+                  width={20}
+                  height={20}
+                  //   className="w-96 h-9w-96"
+                />
+                <div>Logout</div>
               </div>
             </div>
           </div>

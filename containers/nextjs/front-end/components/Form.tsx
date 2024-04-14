@@ -203,13 +203,13 @@ console.log('file',file)
     });
   };
   return (
-    <div className="flex justify-center items-center max-w-[1440px]  text-white rounded-md bg-blue-700 cursor-pointer">
+    <div className="flex justify-center items-center max-w-[1440px]  text-white rounded-md bg-primary cursor-pointer ml-20">
       <button
         onClick={openModal}
-        className="flex items-center justify-center w-[250px] p-1 whitespace-nowrap"
+        className="flex items-center justify-center w-[250px] whitespace-nowrap py-2 gap-3"
       >
-        <Image src="/plus.png" alt="" width={50} height={30} />
-        <span className="ml-2">Share your Experience</span>
+        <Image src="/plus.svg" alt="" width={30} height={30} />
+        <span className="font-semibold text-white">Share Your Experience</span>
       </button>
       <Modal
         isOpen={modalIsOpen}
@@ -234,7 +234,9 @@ console.log('file',file)
           onSubmit={handleSubmit}
           className="flex items-center flex-col m-5 bg-whi text-quaternary w-98 rounded-md p-7"
         >
-          <div className="font-bold mb-7 p-2 rounded-lg text-xl text-white bg-primary">Share Your Experience</div>
+          <div className="font-bold mb-7 p-2 rounded-lg text-xl text-white bg-primary">
+            Share Your Experience
+          </div>
           <label className="flex flex-col">
             <div className="font-semibold">Company Name</div>
             <input

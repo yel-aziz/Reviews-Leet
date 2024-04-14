@@ -104,7 +104,7 @@ const token = tokenCookie ? tokenCookie.split('=')[1] : null;
   return (
 <main className="flex items-center h-full min-h-screen min-w-[280px] max-w-[1440px] mt-10 mx-auto p-1 flex-col bg-[#F1F3F5]" style={{ backgroundImage: "url('/backk.jpg')" }}>
       <div className="flex  flex-col items-center  w-[90%]  h-full mt-10">
-        <div className="flex  justify-end  w-[90%]  ml-auto">
+        <div className="flex  justify-center  w-[100%]">
           <Form value={submit} />
         </div>
 
