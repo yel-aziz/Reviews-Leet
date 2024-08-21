@@ -17,6 +17,12 @@
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
 
 body {
   --sb-track-color: #e2e6e8;
