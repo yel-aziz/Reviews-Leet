@@ -24,7 +24,7 @@ export default function Login() {
     ];
     return (
       <div className="flex flex-col justify-between items-center w-full h-screen">
-        <div className="flex items-center justify-between w-full p-10">
+        <div className="flex items-center justify-between w-full p-[25px]">
           <img
             src="/leet-reviews-logo.svg"
             alt="leet-reviews-logo"
@@ -36,25 +36,29 @@ export default function Login() {
             </div>
           </Link>
         </div>
-        <div className="self-center flex flex-col gap-10 my-[70px] mx-[25px]">
+        <div className="self-center flex flex-col items-center gap-10 max-md:gap-3 my-[70px] max-md:my-[0px] mx-[25px]">
           {cards.map((card, index) => {
             return (
-              <div
-                key={index}
-                className={`transform transition-transform duration-300 hover:scale-105 rounded-xl hover:shadow-2xl bg-quinary shadow-lg h-max max-w-[500px]
-                  `}
-                // index === 0 ? "ml-[-50px]" : index === 1 ? "" : "ml-[50px]"
-              >
-                <img
-                  src="/check-mark.svg"
-                  alt="check-mark"
-                  className="h-10 w-10 relative z-10 mt-[-20px] ml-[-20px]"
-                />
-                <div className="px-5 pb-5">
-                  <span className="text-primary font-semibold text-lg">
-                    {card.title}
-                  </span>
-                  <p className="text-quaternary text-base">{card.subTitle}</p>
+              <div className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105 flex flex-col">
+                <div
+                  key={index}
+                  //   className={`rounded-xl hover:shadow-2xl bg-quinary bg-[green] shadow-lg h-max max-w-[500px]
+                  // `}
+                  // index === 0 ? "ml-[-50px]" : index === 1 ? "" : "ml-[50px]"
+                >
+                  <img
+                    src="/check-mark.svg"
+                    alt="check-mark"
+                    className="h-10 w-10 relative z-10"
+                  />
+                  <div className="p-5 rounded-xl hover:shadow-2xl bg-quinary shadow-lg mt-[-20px] w-[95%] mx-auto">
+                    <span className="text-primary font-semibold text-lg max-md:text-base">
+                      {card.title}
+                    </span>
+                    <p className="text-quaternary text-base max-md:text-xs">
+                      {card.subTitle}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
@@ -66,7 +70,7 @@ export default function Login() {
             alt="PointingHandEmoji.png"
             className="w-[30px] rotate-[135deg] mt-[20px]"
         /> */}
-          <div className="flex flex-col justify-center items-center shadow-2xl rounded-lg p-6 self-center my-10 gap-5">
+          <div className="flex flex-col justify-center items-center shadow-2xl rounded-lg p-6 self-center my-10 max-md:my-3 gap-5">
             <div className="flex flex-col items-center text-quaternary font-bold text-3xl max-md:text-base max-lg:text-xl">
               <p>Share With Us Your Experience.</p>
               <p>Join NOW!</p>
@@ -84,13 +88,13 @@ export default function Login() {
             className="w-[30px] rotate-[225deg] mt-[20px] transform scale-x-[-1] ml-[-50px]"
         /> */}
         </div>
-        <div className="flex text-white bg-quaternary justify-between items-center font-semibold py-3 px-10 w-full mt-auto">
+        <div className="flex text-white bg-quaternary justify-between items-center font-semibold py-3 px-10 max-md:px-[25px] w-full mt-auto">
           <a href="https://www.linkedin.com/in/yassir-el-azizi-1ba527216/">
             by Yassir El azizi
           </a>
           {/* <span>LeetReviews 2024</span> */}
           <a href="https://github.com/yel-aziz/Reviews-Leet" target="_blank">
-            <img src="/github-logo.svg" alt="github-logo" className="w-10" />
+            <img src="/github-logo.svg" alt="github-logo" className="w-10 max-md:w-5" />
           </a>
         </div>
       </div>

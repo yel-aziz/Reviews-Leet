@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     
 
-    <html lang="en" className=' bg-[#F1F3F5] mb-5'>
+    <html lang="en" className=' bg-[#F1F3F5]'>
       <body>
         <header>
          {!desire && <Navbar />} 
